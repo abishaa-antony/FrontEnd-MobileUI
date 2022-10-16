@@ -1,0 +1,41 @@
+<%-include("./partials/header")%>
+
+
+<div id="shopform" class="container w-50 rounded">
+	<form action="/business" method="POST">
+		<div class="form-group">
+			<label for="shopname">Shop Name</label>
+			<input type="text" class="form-control" id="shopname" name="name"placeholder="ABC Electronics">
+		</div>
+		<div class="form-group">
+			<label for="shopad">Shop Address</label>
+			<input type="text" class="form-control" id="shopad" name="address"placeholder="123-AB, xyz">
+		</div>
+		<div class="form-group">
+			<label for="shoparea">Landmark Area</label>
+			<input type="text" class="form-control" id="shoparea" name="landmark"placeholder="PQR Bazaar">
+		</div>
+		<div class="form-group">
+			<label for="shoppin">PINCODE</label>
+			<input type="text" class="form-control" id="shoppin" name="pincode" placeholder="123456">
+		</div>
+		<div class="form-group">
+			<label for="opendays">Open Days</label>
+			<br>
+			<input type="hidden" id="days" name="days">
+			<div id="opendays" class="btn-group" role="group" name="days">
+				<button type="button" class="btn btn-secondary"name=days[SUN]>SUN</button>
+				<button type="button" class="btn btn-secondary"name=days[MON]>MON</button>
+				<button type="button" class="btn btn-secondary"name=days[TUE]>TUE</button>
+				<button type="button" class="btn btn-secondary"name=days[WED]>WED</button>
+				<button type="button" class="btn btn-secondary"name=days[THU]>THU</button>
+				<button type="button" class="btn btn-secondary"name=days[FRI]>FRI</button>
+				<button type="button" class="btn btn-secondary"name=days[SAT]>SAT</button>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary w-25">SUBMIT</button>
+	</form>	
+</div>
+
+
+<%-include("./partials/footer")%>

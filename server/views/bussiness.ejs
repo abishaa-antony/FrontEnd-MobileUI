@@ -1,0 +1,20 @@
+<%-include("./partials/header")	%>
+
+<div class="container row">
+	<%bussiness.forEach(function(buss){ %>
+	
+	<div class="card col-md-4 m-3" style="width: 18rem;">
+		<div class="card-header">
+			<%=buss.name%>
+		</div>
+		<div class="card-body">
+			<h5 class="card-title">Address: <%=buss.address%></h5>
+			<h6 class="card-subtitle mb-2 text-muted">Area: <%=buss.landmark%>, <%=buss.pincode%></h6>
+			<p class="card-text"><%=buss.days%></p>
+			<a href="#" class="card-link"><%=buss.owner.username%></a>
+			<a href="#" class="card-link"><%=buss.owner.email%></a>
+		</div>
+	</div>
+	<%});%>
+</div>
+<%-include("./partials/footer")%>
